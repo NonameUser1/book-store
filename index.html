@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+	<title>Book Store</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header class="bs-header">
+		<ul class=" bs-control-buttons flex-row">
+			<li class="bs-control-buttons__list-item"><button class=" bs-control-btn bs-control-btn--red"></button></li>
+			<li class="bs-control-buttons__list-item"><button class=" bs-control-btn bs-control-btn--orange"></button></li>
+			<li class="bs-control-buttons__list-item"><button class=" bs-control-btn bs-control-btn--green"></button></li>
+		</ul>
+		<div class="bs-app-title flex-row">
+			<img class="bs-app-title__app-logo" src="img/icons/book.png" alt="book-icon">
+			<p class="bs-app-title__app-name">MyBookApp</p>
+		</div>
+		<div class="bs-help-profile flex-row">
+			<a class="bs-help-profile__help-link" href="#">Help Center</a>
+            <i class="fa fa-circle bs-help-profile bs-dot--small"></i>
+			<a class="bs-help-profile__help-link" href="#">Our Support</a>
+			<div class="bs-help-profile__profile bs-profile">
+				<img src="img/avatar.png" alt="profile-image" class="bs-profile__profile-image">
+				<a class="bs-profile__profile-link" href="#">John Doe</a>
+				<img src="img/icons/ok.png" alt="ok-icon">
+			</div>
+		</div>
+	</header>
+	<aside class="bs-aside">
+		<section class="bs-aside__button-section bs-button-section">
+			<button class="bs-button-section__button"> <i class="fas fa-plus bs-button-section__plus-in-btn"></i>add a book</button>
+		</section>
+		<div class="bs-aside--divider"></div>
+		<section class="bs-app-navigation">
+			<nav class=" bs-aside-nav">
+				<ul class="bs-nav-list">
+					<li class="bs-app-navigation__nav-item bs-aside-nav__item">
+						<img src="img/icons/book.png" alt="book-icon" class="bs-app-navigation__icon">
+						<a href="#">New Reading</a>
+					</li>
+					<li class="bs-app-navigation__nav-item bs-app-navigation__nav-item--active bs-aside-nav__item ">
+						<img src="img/icons/globe.png" alt="globe-icon" class="bs-app-navigation__icon">
+						<a href="#">Browse</a>
+					</li>
+					<li class="bs-app-navigation__nav-item bs-aside-nav__item">
+						<img src="img/icons/buy.png" alt="buy-icon" class="bs-app-navigation__icon">
+						<a href="#">Buy</a>
+					</li>
+					<li class="bs-app-navigation__nav-item bs-aside-nav__item">
+						<img src="img/icons/star.png" alt="star-icon" class="bs-app-navigation__icon">
+						<a href="#">Favourite Books</a>
+					</li>
+					<li class="bs-app-navigation__nav-item bs-aside-nav__item">
+						<img src="img/icons/list.png" alt="list-icon" class="bs-app-navigation__icon">
+						<a href="#">Wishlist</a>
+					</li>
+					<li class="bs-app-navigation__nav-item bs-aside-nav__item">
+						<img src="img/icons/time.png" alt="time-icon" class="bs-app-navigation__icon">
+						<a href="#">History</a>
+					</li>
+				</ul>
+			</nav>
+		</section>
+		<div class="bs-aside--divider"></div>
+
+		<section class="bs-categories">
+			<nav class="bs-aside-nav">
+				<ul class="bs-nav-list">
+					<li class="bs-categories__nav-item bs-aside-nav__item"><i class="fa fa-circle bs-dot bs-dot--red"></i><a href="#">Must Read Titles</a></li>
+					<li class="bs-categories__nav-item bs-aside-nav__item"><i class="fa fa-circle bs-dot bs-dot--yellow"></i><a href="#">Best Of List</a></li>
+					<li class="bs-categories__nav-item bs-aside-nav__item"><i class="fa fa-circle bs-dot bs-dot--blue"></i><a href="#">Classic Novels</a></li>
+					<li class="bs-categories__nav-item bs-aside-nav__item"><i class="fa fa-circle bs-dot bs-dot--purple"></i><a href="#">Non Fiction</a></li>
+				</ul>
+			</nav>
+		</section>
+
+		<div class="bs-aside--divider"></div>
+		<section class="bs-notifications">
+			<ul>
+				<li class="bs-notifications flex-row">
+					<div class="bs-ntf__icon">
+						<img src="img/icons/time.png" alt="time-icon" class="bs-notifications__icon">
+					</div>
+					<div class="bs-ntf__text">
+						<p class="bs-ntf bs-ntf--small-text">You added <span class="bs-ntf bs-ntf--big-text">Fight Club</span> by <span class="bs-ntf bs-ntf--big-text">Chuck Palahniuk</span> to your <span class="bs-ntf bs-ntf--big-text">Must Read Titles</span>.</p>
+						<p class="bs-ntf bs-ntf--small-text bs-ntf__time">24 minutes ago</p>
+					</div>
+				</li>
+				<li class="bs-notifications flex-row">
+					<div class="bs-ntf__icon">
+						<img src="img/icons/time.png" alt="time-icon" class="bs-notifications__icon">
+					</div>
+					<div class="bs-ntf__text">
+						<p class="bs-ntf bs-ntf--small-text">You added <span class="bs-ntf bs-ntf--big-text">The Trial</span> by <span class=" bs-ntf bs-ntf--big-text">Franz Kafka</span> to your <span class="bs-ntf bs-ntf--big-text">Read Titles</span>.</p>
+						<p class="bs-ntf bs-ntf--small-text bs-ntf__time">48 minutes ago</p>
+					</div>
+				</li>
+			</ul>
+		</section>
+	</aside>
+	<main class="bs-main">
+		<div class="bs-main__top-panel bs-top-panel">
+			<div class="bs-top-panel__page-name bs-page-name">
+				<h1 class="bs-page-name__title">Browse Available Books</h1>
+			</div>
+			<div class="bs-top-panel__page-navigation flex-row">
+				<nav class="bs-page-nav-list">
+					<ul class="bs-nav-list flex-row">
+						<li class="bs-page-nav-list__nav-item bs-page-nav-list__nav-item--active"><a href="#">All Books</a></li>
+						<li class="bs-page-nav-list__nav-item"><a href="#">Most Recent</a></li>
+						<li class="bs-page-nav-list__nav-item"><a href="#">Most Popular</a></li>
+						<li class="bs-page-nav-list__nav-item"><a href="#">Free Books</a></li>
+					</ul>
+				</nav>
+				<input type="text" placeholder="Enter Keywords" class="bs-page-search">
+			</div>
+		</div>
+
+		<div class="bs-main__books-list bs-books-list">
+            <div class="bs-book">
+				<img src="img/book_cover/JawelsOfNizam.png" alt="book-cover" class="bs-book__img">
+				<h2 class="bs-book__title">Jewels of Nizam</h2>
+				<p class="bs-book__author">by Geeta Devi</p>
+				<div class="bs-book__rating">
+					<span><i class="fas fa-star bs-star"></i></span>
+					<span><i class="fas fa-star bs-star"></i></span>
+					<span><i class="fas fa-star bs-star"></i></span>
+					<span><i class="fas fa-star bs-star"></i></span>
+					<span><i class="fas fa-star bs-star"></i></span>
+				</div>
+			</div>
+			<div class="bs-book">
+				<img src="img/book_cover/CakesBakes.png" alt="book-cover" class="bs-book__img">
+				<h2 class="bs-book__title">Cakes & Bakes</h2>
+				<p class="bs-book__author">by Sanjeev Kapoor</p>
+				<div class="bs-book__rating">
+					<span><i class="fas fa-star bs-star"></i></span>
+					<span><i class="fas fa-star bs-star"></i></span>
+					<span><i class="fas fa-star bs-star"></i></span>
+					<span><i class="fas fa-star bs-star"></i></span>
+					<span><i class="fas fa-star bs-star"></i></span>
+				</div>
+			</div>
+			<div class="bs-book">
+				<img src="img/book_cover/kitchen.png" alt="book-cover" class="bs-book__img">
+				<h2 class="bs-book__title">Jamie’s Kitchen</h2>
+				<p class="bs-book__author">by Jamie Oliver</p>
+				<div class="bs-book__rating">
+					<span><i class="fas fa-star bs-star"></i></span>
+					<span><i class="fas fa-star bs-star"></i></span>
+					<span><i class="fas fa-star bs-star"></i></span>
+					<span><i class="fas fa-star bs-star"></i></span>
+					<span><i class="fas fa-star-half-alt bs-star"></i></span>
+				</div>
+			</div>
+			<div class="bs-book">
+				<img src="img/book_cover/EzInexpensiveMeels.png" alt="book-cover" class="bs-book__img">
+				<h2 class="bs-book__title">Inexpensive Family Meals</h2>
+				<p class="bs-book__author">by Simon Holst</p>
+				<div class="bs-book__rating">
+					<span><i class="fas fa-star bs-star"></i></span>
+					<span><i class="fas fa-star bs-star"></i></span>
+					<span><i class="fas fa-star bs-star"></i></span>
+					<span><i class="fas fa-star bs-star"></i></span>
+					<span><i class="far fa-star bs-star"></i></span>
+				</div>
+			</div>
+			<div class="bs-book">
+				<img src="img/book_cover/Paleo.png" alt="book-cover" class="bs-book__img">
+				<h2 class="bs-book__title">Paleo Slow Cooking</h2>
+				<p class="bs-book__author">by Chrissy Gower</p>
+				<div class="bs-book__rating">
+					<span><i class="fas fa-star bs-star"></i></span>
+					<span><i class="fas fa-star bs-star"></i></span>
+					<span><i class="fas fa-star bs-star"></i></span>
+					<span><i class="fas fa-star bs-star"></i></span>
+					<span><i class="fas fa-star-half-alt bs-star"></i></span>
+				</div>
+			</div>
+			<div class="bs-book">
+				<img src="img/book_cover/Italian.png" alt="book-cover" class="bs-book__img">
+				<h2 class="bs-book__title">Cook Like an Italian</h2>
+				<p class="bs-book__author">by Tobie Puttock</p>
+				<div class="bs-book__rating">
+					<span><i class="fas fa-star bs-star"></i></span>
+					<span><i class="fas fa-star bs-star"></i></span>
+					<span><i class="fas fa-star bs-star"></i></span>
+					<span><i class="fas fa-star bs-star"></i></span>
+					<span><i class="fas fa-star-half-alt bs-star"></i></span>
+				</div>
+			</div>
+			<div class="bs-book">
+				<img src="img/book_cover/indian.png" alt="book-cover" class="bs-book__img">
+				<h2 class="bs-book__title">Suneeta Vaswani</h2>
+				<p class="bs-book__author">by Geeta Devi</p>
+				<div class="bs-book__rating">
+					<span><i class="fas fa-star bs-star"></i></span>
+					<span><i class="fas fa-star bs-star"></i></span>
+					<span><i class="fas fa-star bs-star"></i></span>
+					<span><i class="fas fa-star bs-star"></i></span>
+					<span><i class="fas fa-star bs-star"></i></span>
+				</div>
+			</div>
+			<div class="bs-book">
+				<img src="img/book_cover/bike.png" alt="book-cover" class="bs-book__img">
+				<h2 class="bs-book__title">Jamie Does</h2>
+				<p class="bs-book__author">by Jamie Oliver</p>
+				<div class="bs-book__rating">
+					<span><i class="fas fa-star bs-star"></i></span>
+					<span><i class="fas fa-star bs-star"></i></span>
+					<span><i class="fas fa-star bs-star"></i></span>
+					<span><i class="fas fa-star bs-star"></i></span>
+					<span><i class="far fa-star bs-star"></i></span>
+				</div>
+			</div>
+			<div class="bs-book">
+				<img src="img/book_cover/car.png" alt="book-cover" class="bs-book__img">
+				<h2 class="bs-book__title">Jamie’s italy</h2>
+				<p class="bs-book__author">by Jamie Oliver</p>
+				<div class="bs-book__rating">
+					<span><i class="fas fa-star bs-star"></i></span>
+					<span><i class="fas fa-star bs-star"></i></span>
+					<span><i class="fas fa-star bs-star"></i></span>
+					<span><i class="fas fa-star bs-star"></i></span>
+					<span><i class="fas fa-star bs-star"></i></span>
+				</div>
+			</div>
+			<div class="bs-book">
+				<img src="img/book_cover/chill.png" alt="book-cover" class="bs-book__img">
+				<h2 class="bs-book__title">Vegetables Cookbook</h2>
+				<p class="bs-book__author">by Matthew Biggs</p>
+				<div class="bs-book__rating">
+					<span><i class="fas fa-star bs-star"></i></span>
+					<span><i class="fas fa-star bs-star"></i></span>
+					<span><i class="fas fa-star bs-star"></i></span>
+					<span><i class="fas fa-star-half-alt bs-star"></i></span>
+					<span><i class="far fa-star bs-star"></i></span>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<footer class="bs-footer">
+        <button class="bs-footer__button-info">
+            <img src="img/icons/quesion.png" alt="quesion-icon">
+        </button>
+        <button class="bs-footer__button-config">
+            <img src="img/icons/geer.png" alt="geer-icon">
+        </button>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,415 @@
+@import "reset.scss";
+
+$add-book-color: #f2795a;
+$aside-panel-color: #1f2637;
+$header-color: #2f364a;
+$footer-color: #181e2c;
+$app-navigation-active-color: #15a4fa;
+$profile-color: #15a4fa;
+$aside-font-color: #78829d;
+$info-button-color: #1f2637;
+$config-button-color: #15a4fa;
+$page-navigation-panel-color: #eef1f7;
+$book-title-font-size: 16px;
+$book-author-font-size: 12px;
+$font:'PT Sans', serif ; //should be Proxima Nova-Regular
+
+body{
+  display: grid;
+  grid-template-columns: 15% 85%;
+  grid-template-rows: 2.5% 95% 2.5%  ;
+  //background-color: red;
+}
+.flex-row{
+  display: flex;
+  flex-direction: row;
+}
+.bs-nav-list{
+  height: 100%;
+  width: 100%;
+}
+.bs-star{
+  font-size: 13px;
+  color: #ffab00;
+}
+
+.bs-header{
+  grid-row: 1/2;
+  grid-column: 1/3;
+  height: 100%;
+  width: 100%;
+  min-height: 45px;
+  max-height: 45px;
+  display: flex;
+  justify-content: space-between;
+  background-color: $header-color;
+}
+.bs-control-buttons{
+  height: 100%;
+  width: 200px;
+  margin-left: 10px;
+  align-items: center;
+    &__list-item{
+      display: flex;
+      align-items: center;
+      margin: 10px 3px;
+      width: 10px;
+      height: 10px;
+    }
+}
+.bs-control-btn{
+  border-radius: 100%;
+  border: none;
+  width: 10px;
+  height: 10px;
+  &--red{
+    background-color: #e76847;
+  }
+  &--orange{
+    background-color: #fabf00;
+  }
+  &--green{
+    background-color: #52bea6;
+  }
+}
+.bs-app-title{
+  align-items: center;
+  justify-content: center;
+  &__app-logo{
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+  }
+  &__app-name{
+    font-family: $font;
+    line-height: 45px;
+    font-size: 12px;
+    color: #78829d;
+  }
+}
+.bs-help-profile{
+  align-items: center;
+    &__help-link{
+      line-height: 45px;
+      margin: 0 8px;
+      font-family: $font;
+      color: #78829d;
+        &:visited{
+          color: #78829d;
+        }
+    }
+    &__dot{
+      width: 2px ;
+      height: 2px ;
+    }
+    &__profile{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 100%;
+      min-width: 160px;
+    }
+}
+.bs-profile{
+  font-family: $font;
+  background-color: $profile-color;
+  &__profile-image{
+    border-radius: 50%;
+    width: 31px;
+    height: 31px;
+    border: solid 2px #fff;
+  }
+  &__profile-link{
+    color: #fff;
+    &:visited{
+      color: #fff;
+    }
+  }
+}
+
+
+.bs-aside{
+  grid-row: 2/3;
+  grid-column: 1/2;
+  width: 100%;
+  height: 100%;
+  min-height: 900px;
+  //max-height: 900px;
+  padding-bottom: 45px;
+  background-color: $aside-panel-color;
+  //overflow-y: scroll;
+  //overflow-y: auto;
+    &--divider{
+      width: 100%;
+      height: 4px;
+      background-color: #181e2c;
+      border-top: solid 1px #141824;
+      border-bottom: solid 1px #78829d;
+    }
+    &__button-section{
+      width: 100%;
+      height: 13.5%;
+    }
+    &__app-navigation{
+      width: 100%;
+      height: 25%;
+    }
+    &__categories{
+      width: 100%;
+      height: 15.5%;
+    }
+    &__notifications{
+      width: 100%;
+      height: 46%;
+    }
+}
+.bs-aside-nav{
+  height: 100%;
+  width: 100%;
+  &__item{
+    display: flex;
+    align-items: center;
+    font-family: $font;
+    color: $aside-font-color;
+  }
+}
+.bs-button-section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    &__button{
+      width: 80%;
+      height: 36.7%;
+      max-width: 160px;
+      max-height: 44px;
+      background-color: $add-book-color;
+      text-transform: uppercase;
+      font-family: $font;
+      font-size: 14px;
+      color: #fff;
+      border-radius: 5px;
+      border:none;
+    }
+    &__plus-in-btn{
+      width: 13px;
+      height: 13px;
+      margin-right: 5px;
+    }
+}
+
+.bs-app-navigation{
+  display: flex;
+  align-items: center;
+  padding: 10px;
+    &__nav-item{
+      font-size: 13px;
+      padding: 15px 10px ;
+        &--active{
+          color: #000 !important;
+          font-family: $font;
+          font-size: 13px;
+          background-color: $app-navigation-active-color;
+        }
+    }
+    &__icon{
+      margin-right: 10px;
+    }
+}
+.bs-categories{
+  padding: 10px;
+    &__nav-item{
+      font-size: 13px;
+      padding: 15px 10px;
+    }
+}
+.bs-dot{
+  font-size: 6px;
+  margin-right: 15px;
+  &--red{
+    color: #e64c66;
+  }
+  &--yellow{
+    color: #ffab00;
+  }
+  &--blue{
+    color: #00bfdd;
+  }
+  &--purple{
+    color: #7874cf;
+  }
+  &--small{
+    font-size: 4px;
+  }
+}
+
+.bs-notifications{
+  padding: 15px;
+}
+.bs-ntf{
+  font-size: 12px;
+  font-family: $font;
+    &--small-text{
+      color: #6f7d95;
+      line-height: 16px;
+    }
+    &--big-text{
+      color: #97b3ce;
+      line-height: 16px;
+    }
+    &__time{
+      color: #78829d;
+      margin: 20px 0;
+    }
+    &__icon{
+      width:15%;
+      height: 100%;
+    }
+    &__text{
+      width:85%;
+      height: 100%;
+    }
+}
+
+
+.bs-main{
+  grid-row: 2/3;
+  grid-column: 2/3;
+  width: 100%;
+  height: 100%;
+  background-color: #00bfdd;
+  padding-bottom: 45px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  //overflow-y: auto;
+    &__top-panel{
+      height:13.5% ;
+      width: 100%;
+    }
+    &__books-list{
+      height: 86.5%;
+      width: 100%;
+    }
+}
+.bs-top-panel{
+  background-color: $page-navigation-panel-color ;
+    &__page-name{
+      height: 58%;
+      max-height: 70px;
+      min-height: 30px;
+    }
+    &__page-navigation{
+      height: 42%;
+      width: 100%;
+      max-height: 49px;
+      min-height: 30px;
+      display: flex;
+      padding: 0 20px;
+      justify-content: space-between;
+      align-items: center;
+    }
+}
+.bs-page-name{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  border-bottom: solid 2px #dadfea;
+  padding-left: 20px;
+    &__title{
+      font-family: $font;
+      font-size: 22px;
+      color: #444c63;
+    }
+}
+.bs-page-nav-list{
+  height: 50%;
+  align-items: center;
+
+    &__nav-item{
+      font-size: 12px;
+      font-family: $font ;
+      color: #8c97b2;
+      margin: 0 10px;
+      padding: 5px 10px;
+      display:inherit;
+      justify-content: center;
+      &--active{
+        background-color: #97b3ce ;
+        border-radius: 15px;
+        color: #fff;
+        }
+    }
+
+
+}
+.bs-page-search{
+  width: 30%;
+  height: 70%;
+  border: solid 1px rgba(140, 151, 178, 0.4);
+  border-radius: 30px;
+  padding: 0 10px;
+  background: url("img/icons/zoom.png") 95% 45% no-repeat #fff;
+}
+
+
+.bs-books-list{
+  background-color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  justify-content: center;
+}
+
+.bs-book{
+  width:18%;
+  height: 280px;
+  margin: 10px;
+    &__img{
+      border-radius: 5px;
+    }
+    &__title{
+      font-family: $font;
+      font-size: $book-title-font-size;
+      font-weight: 700;
+      margin-top: 20px;
+      color: #444c63;
+    }
+    &__author{
+      font-family: $font;
+      font-size: $book-author-font-size;
+      color: #6f7d95;
+      margin: 10px 0;
+    }
+}
+
+.bs-footer{
+  grid-column:1/3;
+  grid-row: 3/4;
+  height: 100% ;
+  width: 100%;
+  min-height: 45px;
+  max-height: 45px;
+  //position: fixed;
+  //top: 97.5%;
+  background-color: $footer-color;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+    &__button-info{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: none;
+      width: 55px;
+      background-color: $info-button-color;
+    }
+    &__button-config{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: none;
+      width: 55px;
+      background-color: $config-button-color;
+    }
+
+}
